@@ -35,6 +35,7 @@ class _SignInViewState extends State<SignInView> with Validators {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Form(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           key: _formKey,
           child: Column(
             children: [

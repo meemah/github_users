@@ -8,10 +8,12 @@ mixin Validators {
   }
 
   String? validatePassword(String? value) {
-    if (value!.length > 6) {
-      return 'Please enter a valid password';
+    if (value != null) {
+      if (value.length < 6) {
+        return 'Password should be atleast 6 letters';
+      }
+      return null;
     }
-
     return null;
   }
 }
