@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:github_users/models/user_model.dart';
 
@@ -24,7 +22,6 @@ class HomeViewmodel with ChangeNotifier {
       var users = await ApiClient().get("https://api.github.com/users");
 
       userList = ApiDataResponse.completed(userModelFromJson(users));
-      log(userList.data!.length.toString());
     } catch (e) {
       userList = ApiDataResponse.error(e.toString());
     }

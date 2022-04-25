@@ -81,7 +81,8 @@ class _SignInViewState extends State<SignInView> with Validators {
                   title: "Sign In",
                   onTap: () {
                     if (_formKey!.currentState!.validate()) {
-                      Navigator.pushNamed(context, RouteNames.homeView);
+                      Navigator.pushReplacementNamed(
+                          context, RouteNames.homeView);
                     }
                   }),
               const YMargin(5),

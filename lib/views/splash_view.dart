@@ -32,7 +32,10 @@ class _SplashViewState extends State<SplashView> {
               const YMargin(10),
               Text(
                 "Logistics",
-                style: mulishTextStyle.copyWith(color: kUserTitleColor),
+                style: mulishTextStyle.copyWith(
+                    color: kUserTitleColor,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700),
               ),
               const YMargin(50),
               SvgPicture.asset("asset/bg3.svg"),
